@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Search</title>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+            <h1>Weather Search</h1>
+            <div class="box1">
+                <input type="text" id="locationInput" placeholder="Enter location">
+                <button onclick="searchWeather()">Search</button>
+            </div>
+            <div class="box2">
+                <img src="./img/location.png">
+                <div class="title" id="weatherName"></div>
+                <br>
+                <img src="./img/maps.png">
+                <div class="title" id="weatherCountry"></div>
+                <br>
+                <img src="./img/fahrenheit-degrees.png">
+                <div class="title" id="weatherTem"></div>
+                <br>
+                <img src="./img/low-temperature.png">
+                <div class="title" id="weatherTem_min"></div>
+                <br>
+                <img src="./img/fever.png">
+                <div class="title" id="weatherTem_max"></div>
+                <br>
+                <img src="./img/humidity.png">
+                <div class="title" id="weatherHum"></div>
+                <br>
+                <img src="./img/wind.png">
+                <div class="title" id="weatherWind_speed"></div>
+            </div>
+        </div>
+    </div>
+    <script src="./client.js"></script>
+</body>
+</html>
+<style>
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    }
+    .main {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background: linear-gradient(to bottom right, #dee0f9, #d2edf7);
+    position: relative;
+    }
+    .box {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15%;
+        color: #121629;
+        font-size: 150%;
+    }
+    .box1 {
+        position: absolute;
+        width: 100%;
+        left: 20%;
+        top: 95%;
+    }
+    input{
+        background-color: #b8c1ec;
+        border-radius: 10px;
+        padding-left: 5%;
+    }
+    button {
+        background-color: #b8c1ec;
+        border-radius: 10px;
+    }
+    .box2 {
+        position: absolute;
+        width: 100%;
+        top: 130%;
+        height: 180%;
+        margin-top: 10%;
+    }
+    img {
+        display: none;
+        width: 8%;
+        position: absolute;
+    }
+    .title {
+        position: absolute;
+        font-size: 16px;
+        background-color: #c3b0d6;
+        border-radius: 10px;
+        padding-left: 5%;
+        width: 80%;
+        left: 15%;
+    }
+</style>

@@ -1,5 +1,6 @@
 import express from "express";
 import LocationWeatherInfo from "location-weather-info";
+import cors from "cors";
 
 const app = express();
 const port = 3001;

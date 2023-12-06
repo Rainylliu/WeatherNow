@@ -6,9 +6,10 @@ const port = 3001;
 
 const weather = new LocationWeatherInfo("c143a0179deec5064ed72df015c30c1c");
 console.log(weather);
-
-app.use(express.static("public")); // to serve static files
-app.use(express.json()); // to parse JSON body in POST requests
+const cors = require("cors");
+app.use(cors());
+app.use(express.static("public")); 
+app.use(express.json()); 
 
 app.get("/weather", async (req, res) => {
   try {

@@ -1,12 +1,11 @@
 import express from "express";
 import LocationWeatherInfo from "location-weather-info";
-import cors from "cors";
+import corsMiddleware from "cors"; 
 const app = express();
 const port = 3001;
-const cors = require("cors");
 const weather = new LocationWeatherInfo("c143a0179deec5064ed72df015c30c1c");
 console.log(weather);
-app.use(cors());
+app.use(corsMiddleware());
 app.use(express.static("public")); 
 app.use(express.json()); 
 
